@@ -105,13 +105,15 @@ new EmpleadoBuilder("Ana", "García", "EMP-0001", 1500000,
 
 ## Ejemplo de Builder Pattern
 
-```java
+Código java
+
 // Forma tradicional (versión 1.0.0)
 Empleado emp = new EmpleadoAsalariado("Ana", "García", "EMP-0001", 
     "ana@empresa.com", "912345678", 1500000, LocalDate.of(2020,1,15),
     DepartamentoEnum.TI, 500000, "Senior", 15);
 
 // Forma con Builder (versión 2.0.0)
+
 Empleado emp = new EmpleadoBuilder("Ana", "García", "EMP-0001", 1500000,
                                     TipoEmpleado.ASALARIADO, DepartamentoEnum.TI)
                     .withEmail("ana@empresa.com")
@@ -123,7 +125,8 @@ Empleado emp = new EmpleadoBuilder("Ana", "García", "EMP-0001", 1500000,
                     .build();
 ## Ejemplo de Logger
 
-```java
+Código java
+
 // En lugar de System.out.println
 LOGGER.log(Level.INFO, "Empleado creado: {0}", nombre);
 LOGGER.log(Level.WARNING, "Empleado desactivado: {0}", nombre);
