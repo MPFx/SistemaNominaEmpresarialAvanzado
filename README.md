@@ -54,6 +54,7 @@ Versión avanzada del Sistema de Nómina Empresarial desarrollado en Java. Incor
 Código java
 
 // Constructor con 10+ parámetros - difícil de leer
+
 new EmpleadoAsalariado("Ana", "García", "EMP-0001", "ana@empresa.com", 
     "912345678", 1500000, LocalDate.of(2020,1,15), DepartamentoEnum.TI,
     500000, "Senior", 15);## Solución implementada
@@ -61,6 +62,7 @@ new EmpleadoAsalariado("Ana", "García", "EMP-0001", "ana@empresa.com",
 Código java
 
 // Builder fluido - fácil de leer y modificar
+
 new EmpleadoBuilder("Ana", "García", "EMP-0001", 1500000,
                     TipoEmpleado.ASALARIADO, DepartamentoEnum.TI)
     .withEmail("ana@empresa.com")
@@ -108,6 +110,7 @@ new EmpleadoBuilder("Ana", "García", "EMP-0001", 1500000,
 Código java
 
 // Forma tradicional (versión 1.0.0)
+
 Empleado emp = new EmpleadoAsalariado("Ana", "García", "EMP-0001", 
     "ana@empresa.com", "912345678", 1500000, LocalDate.of(2020,1,15),
     DepartamentoEnum.TI, 500000, "Senior", 15);
