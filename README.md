@@ -24,12 +24,12 @@ Versión avanzada del Sistema de Nómina Empresarial desarrollado en Java. Incor
 
 ## Novedades de esta versión (2.0.0)
 
-| Característica | Versión 1.0.0 | Versión 2.0.0 |
-|----------------|---------------|----------------|
-| Registro de eventos | `System.out.println` | `java.util.logging.Logger` |
-| Creación de objetos | Constructores largos | Builder Pattern fluido |
-| Trazabilidad | Ninguna | Archivo `nomina.log` |
-| Mantenibilidad | Baja | Alta |
+| Característica      |     Versión 1.0.0    |       Versión 2.0.0        |
+|---------------------|----------------------|----------------------------|
+| Registro de eventos |  System.out.println  |  java.util.logging.Logger  |
+| Creación de objetos | Constructores largos | Builder Pattern fluido     |
+| Trazabilidad        | Ninguna              | Archivo  nomina.log        |
+| Mantenibilidad      | Baja                 | Alta                       |
 
 ## Justificación de las mejoras
 
@@ -41,8 +41,8 @@ Versión avanzada del Sistema de Nómina Empresarial desarrollado en Java. Incor
 - No se podía rastrear el flujo de ejecución
 
 **Solución implementada:**
-- Todos los `System.out.println` reemplazados por `LOGGER.log()`
-- Archivo `nomina.log` persistente
+- Todos los System.out.println reemplazados por LOGGER.log()
+- Archivo nomina.log persistente
 - Niveles de log: INFO, WARNING, SEVERE
 
 **Beneficio:** Trazabilidad completa y depuración profesional.
@@ -50,13 +50,13 @@ Versión avanzada del Sistema de Nómina Empresarial desarrollado en Java. Incor
 ### 2. Builder Pattern
 
 **Problema en versión original:**
-```java
+Código java
 // Constructor con 10+ parámetros - difícil de leer
 new EmpleadoAsalariado("Ana", "García", "EMP-0001", "ana@empresa.com", 
     "912345678", 1500000, LocalDate.of(2020,1,15), DepartamentoEnum.TI,
     500000, "Senior", 15);## Solución implementada
 
-```java
+Código java
 // Builder fluido - fácil de leer y modificar
 new EmpleadoBuilder("Ana", "García", "EMP-0001", 1500000,
                     TipoEmpleado.ASALARIADO, DepartamentoEnum.TI)
@@ -71,14 +71,14 @@ new EmpleadoBuilder("Ana", "García", "EMP-0001", 1500000,
 
 ## Jerarquía de Clases
 
-| Clase | Tipo | Descripción |
-|-------|------|-------------|
-| `Empleado` | Abstracta | Clase base con atributos comunes |
-| `EmpleadoAsalariado` | Hija | Sueldo fijo mensual + bono anual |
-| `EmpleadoPorHora` | Hija | Paga por horas trabajadas |
-| `EmpleadoComision` | Hija | Sueldo base + comisión por ventas |
-| `EmpleadoComisionMasBase` | Hija | Garantía de sueldo mínimo + comisión tope |
-| `EmpleadoBuilder` | **NUEVO** | Builder para creación fluida de empleados |
+|         Clase            |          Tipo             |          Descripción             |
+|--------------------------|---------------------------|----------------------------------|
+| Empleado                 | Abstracta                 | Clase base con atributos comunes |
+| EmpleadoAsalariado       | Hija                      | Sueldo fijo mensual + bono anual |
+| EmpleadoPorHora | Hija   | Paga por horas trabajadas                                    |
+| EmpleadoComision | Hija  | Sueldo base + comisión por ventas                            |
+| EmpleadoComisionMasBase  | Hija                      | Garantía de sueldo mínimo + comisión tope |
+| EmpleadoBuilder          | **NUEVO**                 | Builder para creación fluida de empleados |
 
 ## Tipos de Empleado
 
