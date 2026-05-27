@@ -1,7 +1,5 @@
 # Sistema de Nómina Empresarial - Versión Avanzada (Java)
 
-# Sistema de Nómina Empresarial - Versión Avanzada (Java)
-
 > 📌 **Esta es la VERSIÓN 2.0 (avanzada)**  
 > 👉 ¿Buscas la versión base (1.0)? → [SistemaNominaEmpresarialJava](https://github.com/MPFx/SistemaNominaEmpresarialJava)
 
