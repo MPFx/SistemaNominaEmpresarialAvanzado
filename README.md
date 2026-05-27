@@ -1,3 +1,6 @@
+[![Version](https://img.shields.io/badge/versión-2.0.0-blue)](https://github.com/MPFx/SistemaNominaEmpresarialJava)
+
+
 # Sistema de Nómina Empresarial - Versión Avanzada (Java)
 
 > 📌 **Esta es la VERSIÓN 2.0 (avanzada)**  
